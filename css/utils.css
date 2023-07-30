@@ -1,0 +1,26 @@
+.flex{
+    display: flex;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.grid{
+    display: grid;
+}
+
+.text-style-1{
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.relative{
+    position: relative;
+}
+
+.rotate90{
+    transform: rotateZ(270deg);
+}

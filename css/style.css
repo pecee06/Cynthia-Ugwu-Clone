@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+
+body{
+    background-color: black;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+.hero{
+    min-height: calc(100vh - 100px);
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 40px;
+}
+
+nav{
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    padding: 0 40px;
+    height: 100px;
+    background-color: black;
+    z-index: 3;
+}
+
+nav a{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+nav button{
+    background-color: black;
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+nav button::after{
+    content: "+";
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 15px;
+    position: absolute;
+    padding: 2px;
+}
+
+header{
+    text-transform: uppercase;
+    padding: 0 40px;
+    line-height: 1;
+    letter-spacing: 1px;
+}
+
+header h1{
+    font-size: 10vmax;
+    opacity: 0.7;
+}
+
+header div{
+    width: fit-content;
+    display: inline-block;
+}
+
+header div h1{
+    margin-left: 150px;
+}
+
+header h3{
+    text-align: right;
+    font-weight: 600;
+}
+
+.hero-footer{
+    justify-content: space-between;
+    padding: 0 40px;
+    font-size: 1.2vmax;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+
+.hero-footer ul{
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.hero-footer ul i{
+    background-color: rgba(255, 255, 255, 0.7);
+    color: black;
+    font-size: 17px;
+    border-radius: 100%;
+    padding: 4px;
+    transition: all ease 0.2s;
+}
+
+.hero-footer ul i:hover{
+    background-color: black;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#features{
+    margin-top: 40px;
+    min-height: 100vh;
+}
+
+#features .elements{
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 90%;
+    border-top: 2px solid rgba(255, 255, 255, 0.3);
+    text-transform: uppercase;
+    position: relative;
+}
+
+#features .elements img{
+    width: 30%;
+    height: auto;
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#features .elements:last-child{
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+#features .elements h2{
+    font-size: 9vmax;
+}
+
+#features .elements h2:hover{
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#about{
+    min-height: 100vh;
+    grid-template-columns: 1fr 2.8fr;
+    padding: 0 40px;
+}
+
+#about .left{
+    align-self: end;
+    text-transform: uppercase;
+    line-height: 1.7;
+    padding-bottom: 1rem;
+}
+
+#about .left a{
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+#about .right{
+    gap: 70px;
+    padding: 0 100px;
+    padding-top: 18vh;
+}
+
+#about .right img{
+    height: 250px;
+}
+
+#about .right div{
+    line-height: 1.7;
+}
+
+#about .right div p{
+    font-weight: 500;
+    font-size: 17px;
+}
+
+#about .right div button{
+    background-color: black;
+    border: 1px solid white;
+    font-size: 18px;
+    padding: 5px 20px;
+    border-radius: 20px;
+    margin-top: 10px;
+    transition: all ease 0.5s;
+}
+
+#about .right div button:hover{
+    color: black;
+    background-color: white;
+}
+
+footer{
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 30vh;
+    padding: 0 40px;
+    padding-bottom: 10px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+footer .left{
+    gap: 30px;
+}
+
+footer .left span{
+    font-weight: 600;
+}
+
+footer .left span:first-child{
+    font-size: 15px;
+}
+
+footer .social{
+    gap: 50px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.circle{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: white;
+    position: fixed;
+    z-index: 10;
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.underline{
+    display: inline-block;
+    height: 1px;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    right: 1%;
+}
+
+.sideTag{
+    position: fixed;
+    top: 40%;
+    right: 0;
+    height: 13vmax;
+    width: 50px;
+    background-color: white;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    pointer-events: none;
+}
+
+.sideTag span{
+    color: black;
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+.sideTag span.rotate90{
+    bottom: 25px;
+}
